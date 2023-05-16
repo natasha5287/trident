@@ -1,0 +1,91 @@
+.table {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    line-height: 16px;
+    border-collapse: collapse;
+}
+
+.table__header {
+    font-weight: 500;
+    text-align: left;
+    border-bottom: 1px solid $dark-color;
+    vertical-align: bottom;
+
+    th {
+        padding-bottom: 5px;
+    }
+
+    .table__col2 {
+        text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    @media (min-width: $large-width) {
+        vertical-align: middle;
+
+        th {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.table__body {
+    color: $dark-color;
+
+    tr:nth-child(odd) {
+        background-color: $grey-color;
+    }
+}
+
+.table__basic {
+    font-weight: 400;
+    background-color: $grey-color;
+}
+
+td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.table__col1 {
+    padding-left: 10px;
+    width: 20%;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 20px;
+    }
+
+    @media (min-width: $large-width) {
+        width: 240px;
+        padding-left: 55px;
+    }
+}
+
+.table__col2 {
+    padding-left: 25px;
+    width: 45%;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 50px;
+    }
+
+    @media (min-width: $large-width) {
+        width: 270px;
+    }
+}
+
+.table__col3 {
+    width: 35%;
+    padding-left: 25px;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 50px;
+    }
+
+    @media (min-width: $large-width) {
+        width: 270px;
+    }
+}

@@ -1,0 +1,120 @@
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 11px 28px;
+    transition: all 0.3s ease-in-out;
+    width: max-content;
+
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        padding: 15px 45px;
+    }
+
+    &:hover {
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}
+
+.button-primary {
+    background-color: $primary-color;
+    color: $white-color;
+
+    svg {
+        fill: $white-color;
+    }
+
+    &:hover {
+        background-color: lighten($primary-color, 10%);
+    }
+}
+
+.button-yellow {
+    background-color: $yellow-color;
+    color: $primary-color;
+
+    svg {
+        fill: $dark-color;
+    }
+
+
+    &:hover {
+        background-color: darken($yellow-color, 10%);
+    }
+}
+
+.button-tab {
+    padding: 8px 17px;
+    font-weight: 400;
+    font-size: 13px;
+    color: $primary-color;
+    border: 1px solid $yellow-color;
+    border-right-width: 9px;
+    text-transform: uppercase;
+    min-width: 145px;
+
+    &:hover {
+        border-color: darken($yellow-color, 10%);
+    }
+
+    &-active {
+        background-color: $yellow-color;
+
+        &:hover {
+            background-color: darken($yellow-color, 10%);
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 15px;
+        padding: 8px 25px;
+        border-right-width: 9px;
+    }
+}
+
+.button-grey {
+    background-color: $grey-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $dark-color;
+    letter-spacing: 3.6px;
+    padding: 15px;
+}
+
+.button-pagination {
+    width: 32px;
+    height: 32px;
+    color: $dark-color;
+    border: 1px solid #E0E0E0;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        stroke: #E0E0E0;
+    }
+
+    &--prev {
+
+        svg {
+            transform: rotate(180deg);
+        }
+
+    }
+
+    &--active {
+        background-color: $yellow-color;
+        border-color: $yellow-color;
+    }
+
+    &:hover {
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+}

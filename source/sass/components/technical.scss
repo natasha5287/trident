@@ -1,0 +1,37 @@
+.technical__title {
+    margin-bottom: 25px;
+}
+
+.technical__list {
+    color: $dark-color;
+    padding: 0 15px 5px;
+    background: #FFFFFF;
+    border: 1px solid $grey-color;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.technical__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid #D7D7D7;
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.techical__name {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.technical__value {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}

@@ -1,0 +1,14 @@
+.mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: $white-color;
+    border: 1px solid #EBE9E6;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.mark-circle {
+    border-radius: 50%;
+}

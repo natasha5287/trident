@@ -1,0 +1,31 @@
+.headline-s {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.headline-m {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+
+.headline-l {
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 30px;
+
+    &-bold {
+        font-weight: 700;
+    }
+
+    @media (min-width: $desktop-width) {
+        font-size: 45px;
+        line-height: 46px;
+    }
+}

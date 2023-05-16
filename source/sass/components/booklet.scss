@@ -1,0 +1,108 @@
+.booklet {
+    margin-bottom: 90px;
+}
+
+.booklet__wrap {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px 0 55px;
+    border: 1px solid #F5F5F5;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+
+    @media (min-width: $desktop-width) {
+        max-width: unset;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto auto;
+        padding: 0 0 0 20px;
+        row-gap: 0;
+    }
+
+    @media (min-width: $large-width) {
+        grid-template-columns: 1fr 2fr;
+        padding-left: 45px;
+    }
+}
+
+.booklet__wrapper {
+    padding: 0 10px;
+
+    @media (min-width: $desktop-width) {
+        padding-top: 20px;
+    }
+
+    @media (min-width: $large-width) {
+        padding-top: 50px;
+        padding-left: 0;
+    }
+}
+
+.booklet__title {
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+}
+
+.booklet__intro {
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+        text-align: left;
+    }
+}
+
+.booklet__box {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 64px;
+        height: 64px;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url("../img/file.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $yellow-color;
+        border-radius: 50%;
+        outline: 7px solid rgba(244, 208, 89, 0.34);
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 1/2/3/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            bottom: unset;
+            transform: translate(50%, -50%);
+        }
+    }
+}
+
+.booklet__img {
+    width: 100%;
+    display: block;
+}
+
+.booklet__link {
+    @media (min-width: $desktop-width) {
+        margin: 20px 0;
+    }
+
+    @media (min-width: $large-width) {
+        margin: 35px 0;
+    }
+}

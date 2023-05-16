@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Trident</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <button class="header__toggle" type="button">
+            <span class="visually-hidden">open navigation</span>
+            <span></span> <!-- for visual button -->
+        </button>
+
+        <div class="container">
+            <div class="header__container">
+                <a class="header__logo" href="index.html">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 768px)"
+                            srcset="./img/logo_header_desktop.webp 1x, ./img/logo_header_desktop@2x.webp 2x">
+                        <source type="image/webp"
+                            srcset="./img/logo_header_mobile.webp 1x, ./img/logo_header_mobile@2x.webp 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="./img/logo_header_desktop.png 1x, ./img/logo_header_desktop@2x.png 2x">
+                        <img class="header__img" src="./img/logo_header_mobile.png"
+                            srcset="./img/logo_header_mobile@2x.png" alt="logotype">
+                    </picture>
+                </a>
+
+                <a class="header__catalogue" href="order.html">
+                    <span><span class="header__catalogue-bold">Order </span><span
+                            class="header__catalogue-hidden">trident
+                        </span>catalogue</span>
+                    <svg aria-hidden="true" viewBox="0 0 12 8" width="12" height="8">
+                        <use xlink:href="./img/sprite.svg#arrow_btn"></use>
+                    </svg>
+                </a>
+
+                <nav class="header__nav nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav__item">
+
+                            <a class="nav__link" href="#">Styles
+                                <svg aria-hidden="true" viewBox="0 0 8 9" width="8" height="9">
+                                    <use xlink:href="./img/sprite.svg#arrow"></use>
+                                </svg>
+                            </a>
+
+                            <ul class="nav__dropdown">
+                                <li class="nav__item">
+                                    <a class="nav__link" href="catalog.html">Garden rooms</a>
+                                </li>
+                                <li class="nav__item">
+                                    <a class="nav__link" href="#">Modular houses</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="interior.html">Interior</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="contact__map" id="map"></div>
+            <div class="contact__box">
+                <h2 class="contact__title headline-l">Contact us</h2>
+                <address class="contact__address">
+                    <p>Forpeople Studio</p>
+                    <p>1 Space Street</p>
+                    <p>New York, NY-90814</p>
+                </address>
+                <div class="contact__wrap">
+                    <a href="mailto:hello@forpeople.studio">Email: hello@forpeople.studio</a>
+                    <a href="tel:1800999800">Tel: +1-800-999-800</a>
+                </div>
+
+                <a class="contact__btn button button-primary" href="#">
+                    <span>Get request</span>
+                    <svg aria-hidden="true" viewBox="0 0 12 8" width="12" height="8">
+                        <use xlink:href="./img/sprite.svg#arrow_btn"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="request__container">
+                <div class="request__box">
+                    <h2 class="headline-l headline-l-bold">Leave a request and we will contact you</h2>
+                    <p>A Trident garden room can transform your garden into a place that you will use all year round,
+                        also adding</p>
+                </div>
+                <form class="request__form">
+                    <fieldset class="form__personal">
+                        <label class="form__legend" for="name">Your name</label>
+                        <input class="form__input input" type="text" id="name" name="name" placeholder="Name">
+                        <label class="form__legend" for="phone">Your Phone</label>
+                        <input class="form__input input" type="tel" id="phone" name="phone" placeholder="Phone">
+                        <label class="form__legend" for="email">Your E-mail</label>
+                        <input class="form__input input" type="email" id="email" name="email" placeholder="E-mail">
+                        <label class="form__legend" for="message">Your text</label>
+                        <textarea class="form__input input" id="message" name="message" rows="5" cols="33"
+                            placeholder="Type massege"></textarea>
+                    </fieldset>
+                    <fieldset class="form__subs">
+                        <label class="form__label">
+                            <input class="form__input visually-hidden" type="checkbox" name="agree" value="yes"
+                                required>
+                            <span class="mark"></span>
+                            <span>I agree that TRIDENT can contact me to send me the Catalogue of houses.</span>
+                        </label>
+                        <label class="form__label">
+                            <input class="form__input visually-hidden" type="checkbox" name="sub" value="yes">
+                            <span class="mark"></span>
+                            <span>I wish to receive information about open house events, other materials relevant to my
+                                interests and news via Newsletter from TRIDENT</span>
+                        </label>
+
+                        <p>By submitting your information you confirm that you have read the Privacy Policy which
+                            contains instructions regarding the right of access to your data, the possibility of
+                            rectifying it and the right to lodge a complaint with a supervisory authority. Your consent
+                            may be revoked at any time by sending an e-mail to dpo@danwood.pl, with the consequence of
+                            the erasure of your contact details from the distribution of our materials.</p>
+                    </fieldset>
+
+                    <button class="form__request button button-yellow" type="submit">
+                        <span>Get request</span>
+                        <svg aria-hidden="true" viewBox="0 0 12 8" width="12" height="8">
+                            <use xlink:href="./img/sprite.svg#arrow_btn"></use>
+                        </svg>
+                    </button>
+
+                    <a class="form__policy" href="#">You can read our Privacy Policy here</a>
+                </form>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__wrap">
+                    <a class="footer__logo" href="index.html">
+                        <picture>
+                            <source type="image/webp" srcset="./img/logo_footer.webp 1x, ./img/logo_footer@2x.webp 2x">
+                            <img class="footer__img" src="./img/logo_footer.png" srcset="./img/logo_footer@2x.png"
+                                alt="logotype" loading="lazy">
+                        </picture>
+                    </a>
+
+                    <ul class="footer__contacts">
+                        <li class="footer__contact">
+                            <a class="footer__link"
+                                href="https://www.google.com/maps/place/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9+%D1%81%D0%B0%D0%B4+%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8+%D0%A2%D0%B0%D1%80%D0%B0%D1%81%D0%B0+%D0%A8%D0%B5%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE/@50.0011451,36.2227683,16z/data=!4m15!1m8!3m7!1s0x4127a09f63ab0f8b:0x2d4c18681aa4be0a!2z0KXQsNGA0YzQutC-0LIsINCl0LDRgNGM0LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCw!3b1!8m2!3d49.9935!4d36.230383!16zL20vMDgyc3k5!3m5!1s0x4127a1833325e491:0x3313f5718d5a62d0!8m2!3d50.0013471!4d36.2328967!16s%2Fg%2F12340zf9"
+                                target="_blank" rel="nofollow">
+                                <svg aria-hidden="true" viewBox="0 0 12 15" width="12" height="15">
+                                    <use xlink:href="./img/sprite.svg#pin"></use>
+                                </svg>
+                                111A T. Shevchenko</a>
+                        </li>
+                        <li class="footer__contact">
+                            <a class="footer__link" href="tel:00546272444">
+                                <svg class="footer__icon" aria-hidden="true" viewBox="0 0 14 15" width="14" height="15">
+                                    <use xlink:href="./img/sprite.svg#phone"></use>
+                                </svg>
+                                0054-6272444</a>
+                        </li>
+                        <li class="footer__contact">
+                            <a class="footer__link" href="mailto:info@mail.com">
+                                <svg class="footer__icon" aria-hidden="true" viewBox="0 0 14 11" width="14" height="11">
+                                    <use xlink:href="./img/sprite.svg#email"></use>
+                                </svg>
+                                Info@mail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="index.html">Home</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="about.html">About us</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="interior.html">Interior</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="catalog.html">Garden House</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Garden Salon</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Commercial Workspace</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Lake House</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Forest House</a>
+                    </li>
+                </ul>
+
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Barn House</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Style</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Style</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Style</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">Style</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="footer__wrapper">
+                <ul class="footer__social">
+                    <li>
+                        <a class="footer__link" href="https://www.facebook.com/">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg aria-hidden="true" viewBox="0 0 11 20" width="11" height="20">
+                                <use xlink:href="./img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="https://www.instagram.com/">
+                            <span class="visually-hidden">Instagram</span>
+                            <svg aria-hidden="true" viewBox="0 0 19 20" width="19" height="20">
+                                <use xlink:href="./img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="https://www.youtube.com/">
+                            <span class="visually-hidden">Youtube</span>
+                            <svg aria-hidden="true" viewBox="0 0 19 14" width="19" height="14">
+                                <use xlink:href="./img/sprite.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer__box">
+                    <span>© Trident 2023</span>
+                    <span>Privacy Policy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.min.js" type="module"></script>
+
+
+</body>
+
+</html>

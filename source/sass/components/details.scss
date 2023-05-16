@@ -1,0 +1,234 @@
+.details {
+    padding-top: 27px;
+    padding-bottom: 55px;
+
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 40% 55%;
+        column-gap: 5%;
+        row-gap: 20px;
+        padding-top: 0;
+    }
+
+    @media (min-width: $large-width) {
+        max-width: 1220px;
+        grid-template-columns: 1fr 630px;
+        column-gap: 90px;
+    }
+}
+
+.details__title {
+    margin-bottom: 40px;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+    }
+}
+
+.details__wrapper {
+    margin-bottom: 35px;
+
+    .interior__slider {
+        margin-right: -10px;
+        margin-left: -10px;
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 1/2/3/3;
+        margin: 0;
+
+        .interior__slider {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}
+
+.details__description {
+    margin-bottom: 75px;
+
+    .details__text {
+        margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 2/1/4/2;
+        margin-bottom: 10px;
+    }
+}
+
+.details__order {
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.details__link {
+    @media (min-width: $desktop-width) {
+        padding: 15px;
+    }
+
+    @media (min-width: $large-width) {
+        padding: 15px 45px;
+    }
+}
+
+.details__variable {
+    @media (min-width: $desktop-width) {
+        grid-area: 4/1/6/2;
+        align-self: flex-start;
+    }
+
+    @media (min-width: $large-width) {
+        align-self: unset;
+    }
+}
+
+.details__price {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 25px;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+    }
+}
+
+.details__value {
+    font-size: 29px;
+}
+
+.details__video {
+    margin-bottom: 55px;
+
+    @media (min-width: $desktop-width) {
+        grid-area: 3/2/4/3;
+        margin-bottom: auto;
+    }
+
+    @media (min-width: $large-width) {
+        grid-area: 3/2/5/3;
+    }
+}
+
+.details__technical {
+    margin-bottom: 45px;
+
+    @media (min-width: $desktop-width) {
+        grid-area: 6/1/7/2;
+    }
+}
+
+.details__documents {
+    background-color: $primary-color;
+    color: $white-color;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 35px;
+    padding: 25px 10px 55px;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $tablet-width) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0 -50px 0 0;
+        padding-left: 30px;
+        grid-area: 4/2/6/3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @media (min-width: $large-width) {
+        padding: 45px 50px 60px 115px;
+        grid-area: 5/2/6/3;
+    }
+}
+
+.details__download {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 7px;
+    width: max-content;
+    color: $yellow-color;
+    transition: color 0.3s ease-in-out;
+
+    svg {
+        stroke: currentColor;
+    }
+
+    &:hover {
+        color: $white-color;
+    }
+}
+
+.details__download+.details__download {
+    margin-top: 10px;
+}
+
+.details__floorplans {
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-area: 6/2/7/3;
+        align-self: center;
+        padding-left: 30px;
+    }
+}
+
+.details__floorplans-list {
+    column-gap: 10px;
+    row-gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.details__floorplans-item {
+    border: 1px solid $grey-color;
+
+    img {
+        width: 100%;
+        display: block;
+        padding: 8px 2px;
+    }
+
+    a {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 3px;
+            right: 3px;
+            width: 13px;
+            height: 11px;
+            background: no-repeat url('../img/zoom-in.svg') center;
+        }
+    }
+
+}
+
+.fancybox__container {
+    --fancybox-bg: #fff;
+}
+
+.f-button {
+    background-color: $primary-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover:not([disabled]) {
+        background-color: lighten($primary-color, 10%)
+    }
+}

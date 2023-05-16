@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Lato", Arial, sans-serif;
+    color: $primary-color;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-X: hidden;
+
+    @media (min-width: $desktop-width) {
+        font-size: 16px;
+    }
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer,
+header {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input,
+button,
+textarea {
+    border: none;
+    background: none;
+    outline: none;
+    font-family: "Lato", Arial, sans-serif;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.container {
+    padding: 0 10px;
+    max-width: 1320px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+        padding: 0 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 0 50px;
+    }
+}
+
+.wrapp {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $desktop-width) {
+        flex-direction: column-reverse;
+    }
+}

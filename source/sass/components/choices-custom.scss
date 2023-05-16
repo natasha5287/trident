@@ -1,0 +1,183 @@
+.choices {
+    margin-bottom: 0;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+        min-width: 190px;
+    }
+}
+
+.choices__inner {
+    position: relative;
+    padding: 15px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    border: 1px solid $yellow-color;
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+    @media (min-width: $desktop-width) {
+        font-size: 15px;
+    }
+
+    @media (min-width: $large-width) {
+        padding-left: 22px;
+    }
+}
+
+.is-open .choices__list--dropdown[aria-expanded],
+.is-open .choices__list[aria-expanded] {
+    border-color: $yellow-color;
+    border-radius: 0;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+    z-index: 2;
+}
+
+
+.is-open .choices__inner,
+.is-focused .choices__inner {
+    border-color: $yellow-color;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: lighten($yellow-color, 10%);
+}
+
+.choices__list--single {
+    padding: 0;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+    @media (min-width: $tablet-width) {
+        padding-right: 10px;
+    }
+
+    @media (min-width: $large-width) {
+        padding-left: 22px;
+    }
+}
+
+.choices__placeholder {
+    opacity: 1;
+}
+
+.choices[data-type*=select-one]::after {
+    background-image: url("../img/arrow-choices.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $yellow-color;
+    border: none;
+    z-index: 5;
+    width: 24px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 0;
+}
+
+.choices[data-type*=select-one].is-open::after {
+    transform: rotate(180deg);
+    margin-top: 0;
+}
+
+.catalog__sorting {
+
+    .choices {
+        width: 50%;
+    }
+
+    .choices__inner {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $dark-color;
+        border: none;
+        border-radius: 0;
+        background-color: $grey-color;
+        text-transform: uppercase;
+    }
+
+    .choices[data-type*=select-one]::after {
+        background-color: transparent;
+    }
+
+    .is-open .choices__list--dropdown[aria-expanded],
+    .is-open .choices__list[aria-expanded] {
+        border-color: $grey-color;
+    }
+
+
+    .choices__list--dropdown .choices__item--selectable.is-highlighted,
+    .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+        background-color: lighten($grey-color, 1%);
+    }
+
+    @media (min-width: $desktop-width) {
+        .choices {
+            width: 150px;
+            min-width: 120px;
+        }
+
+        .choices__inner {
+            background-color: transparent;
+            text-transform: unset;
+            letter-spacing: 0;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            padding-right: 30px;
+            color: $primary-color;
+        }
+
+        .choices__list--dropdown {
+            text-transform: unset;
+            letter-spacing: 0;
+            font-weight: normal;
+        }
+
+        .choices__list--dropdown .choices__item--selectable,
+        .choices__list[aria-expanded] .choices__item--selectable {
+            padding-right: 10px;
+        }
+    }
+}
+
+.form,
+.request__form {
+    .choices__inner {
+        background-color: $white-color;
+        text-transform: unset;
+        border: 1px solid #ebe9e6;
+
+        &:hover {
+            border-color: $yellow-color;
+        }
+    }
+
+    .choices[data-type*=select-one]::after {
+        display: none;
+    }
+
+    .choices__placeholder {
+        color: #525252;
+    }
+
+    .choices__list--dropdown .choices__placeholder {
+        display: none;
+    }
+
+    .is-open .choices__inner,
+    .is-focused .choices__inner {
+        border-color: $yellow-color;
+    }
+
+}
